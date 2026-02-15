@@ -1,0 +1,51 @@
+.react-calendar {
+    width: 100% !important;
+    border: none !important;
+    font-family: inherit;
+}
+
+.react-calendar__tile {
+    position: relative;
+    height: 80px !important;
+    /* Increased height to accommodate events */
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.react-calendar__tile--now {
+    background: #f0f9ff !important;
+}
+
+.react-calendar__tile--active {
+    background: #3b82f6 !important;
+    color: white !important;
+}
+
+.react-calendar__tile.has-event {
+    background-color: #eff6ff;
+    /* Light blue background for event dates */
+}
+
+.react-calendar__tile.has-event abbr {
+    font-weight: bold;
+    color: #1d4ed8;
+    /* Dark blue text for event dates */
+}
+
+.react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+    font-size: 1.1rem;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+/* Hide the default date number styling */
+.react-calendar__tile abbr {
+    display: none;
+}

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "api",
+			"path": "../../../ecommerce/zit_orolino_redoan/api"
+		},
+		{
+			"name": "bof_website",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

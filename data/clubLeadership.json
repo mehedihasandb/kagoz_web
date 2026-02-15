@@ -1,0 +1,212 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "type": "president",
+      "title": "Club President",
+      "person": {
+        "name": "Maj Gen Syed Sabbir Ahmed",
+        "rank": "SGP, ndc, afwc, psc",
+        "image": "/assets/images/honor/p1.jpg",
+        "description": "As the President of BOF Golf Club, Maj Gen Syed Sabbir Ahmed brings visionary leadership and a deep commitment to promoting sportsmanship, discipline, and fellowship. With an esteemed background in military service and organizational leadership, he has been instrumental in the development of the clubs facilities, programs, and strategic direction. Under his guidance, the club continues to thrive as a center for excellence and community engagement."
+      },
+      "honorBoard": {
+        "titleRed": "Club President",
+        "titleGreen": "Honor Board",
+        "members": [
+          {
+            "image": "/assets/images/honor/p2.jpg",
+            "name": "Maj Gen Md Maksudul Haque",
+            "rank": "BSP, ndc, afwc, psc, mphil",
+            "duration": "16.01.2023 - 16.10.2024",
+            "type": "portrait"
+          },
+          {
+            "image": "/assets/images/honor/p3.jpg",
+            "name": "MAJ GEN SYED TAREK HOSSAIN",
+            "rank": "SUP, psc, PhD",
+            "duration": "12.03.2022 - 25.01.2023",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/p4.jpg",
+            "name": "MAJ GEN SHEIKH PASHA HABIB UDDIN",
+            "rank": "SGP, BAMS, afwc, psc",
+            "duration": "09.09.2018 - 10.11.2021",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/p5.jpg",
+            "name": "MAJ GEN SHEIKH MAMUN KHALED",
+            "rank": "SUP, psc, PhD",
+            "duration": "20.09.2017 - 09.09.2018",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/p6.jpg",
+            "name": "MAJ GEN HAMIDUR RAHMAN CHAWDHURY",
+            "rank": "rds, psc",
+            "duration": "25.09.2016 - 20.09.2017",
+            "type": "portrait"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "type": "vicePresident",
+      "title": "Club Vice President",
+      "person": {
+        "name": "BRIG GEN A S M ANISUL HAQUE",
+        "rank": "SGP, BGBM, PBGM, ndc, psc",
+        "image": "/assets/images/honor/vp1.jpg",
+        "description": "As the Vice President of BOF Golf Club, BRIG GEN A S M ANIS HAQUE, SGP, BGBM, PBGM, ndc, psc brings visionary leadership and a deep commitment to promoting sportsmanship, discipline, and fellowship. With an esteemed background in military service and organizational leadership, he has been instrumental in the development of the clubs facilities, programs, and strategic direction. Under his guidance, the club continues to thrive as a center for excellence and community engagement."
+      },
+      "honorBoard": {
+        "titleRed": "Club Vice President",
+        "titleGreen": "Honor Board",
+        "members": [
+          {
+            "image": "/assets/images/honor/vp2.jpg",
+            "name": "BRIG GEN AMIRUL ISLAM SHIKDER",
+            "rank": "BGBM, PBGM, BGBMS, G+",
+            "duration": "17.01.2023 - 31.12.2024",
+            "type": "portrait"
+          },
+          {
+            "image": "/assets/images/honor/vp3.jpg",
+            "name": "BRIG GEN SHARIF HOSSAIN",
+            "rank": "psc",
+            "duration": "19.12.2021 - 16.01.2023",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/vp4.jpg",
+            "name": "BRIG GEN MD HABIBUR RAHMAN",
+            "rank": "",
+            "duration": "14.11.2021 - 18.12.2021",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/vp5.jpg",
+            "name": "BRIG GEN KAZI MOHAMMAD KAISER HOSSAIN",
+            "rank": "psc",
+            "duration": "24.01.2021 - 13.11.2011",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/vp6.jpg",
+            "name": "Brig Gen Md Jaglul Pasha",
+            "rank": "afwc, psc B+",
+            "duration": "24.01.2016 - 23.01.2017",
+            "type": "portrait"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": "golfCaptain",
+      "title": "Golf Captain",
+      "person": {
+        "name": "COL MD KAMRUZZAMAN",
+        "rank": "psc",
+        "image": "/assets/images/honor/gc1.jpg",
+        "description": "As the Golf Captain of BOF Golf Club, COLONEL MD KAMRUZZAMAN brings visionary leadership and a deep commitment to promoting sportsmanship, discipline, and fellowship. With an esteemed background in military service and organizational leadership, he has been instrumental in the development of the clubs facilities, programs, and strategic direction. Under his guidance, the club continues to thrive as a center for excellence and community engagement."
+      },
+      "honorBoard": {
+        "titleRed": "Golf Captain",
+        "titleGreen": "Honor Board",
+        "members": [
+          {
+            "image": "/assets/images/honor/gc2.jpg",
+            "name": "COL MOHAMMAD ATIKUL ISLAM",
+            "rank": "psc",
+            "duration": "16.11.2021 - 14.11.2022",
+            "type": "portrait"
+          },
+          {
+            "image": "/assets/images/honor/gc3.jpg",
+            "name": "Col AKM Khobirul Islam",
+            "rank": "phd",
+            "duration": "12.01.2025 - 08.09.2025",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gc4.jpg",
+            "name": "LT COL WASIUDDIN AHMED",
+            "rank": "psc",
+            "duration": "29.08.2024 - 11.01.2025",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gc5.jpg",
+            "name": "LT COL MOHAMMAD EFTEKHARUL KARIM",
+            "rank": "psc",
+            "duration": "15.11.2022 - 28.08.2024",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gc6.jpg",
+            "name": "COL MD MIZANUZZAMAN",
+            "rank": "",
+            "duration": "16.11.2021 - 14.11.2022",
+            "type": "portrait"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "type": "golfSecretary",
+      "title": "Golf Secretary",
+      "person": {
+        "name": "MAJ MOHAMMAD MAHFUZUL ISLAM",
+        "rank": "G+, Air Defence",
+        "image": "/assets/images/honor/gs1.jpg",
+        "description": "As the Golf Secretary of BOF Golf Club, MAJ MOHAMMAD MAHFUZUL ISLAM brings visionary leadership and a deep commitment to promoting sportsmanship, discipline, and fellowship. With an esteemed background in military service and organizational leadership, he has been instrumental in the development of the clubs facilities, programs, and strategic direction. Under his guidance, the club continues to thrive as a center for excellence and community engagement."
+      },
+      "honorBoard": {
+        "titleRed": "Golf Secretary",
+        "titleGreen": "Honor Board",
+        "members": [
+          {
+            "image": "/assets/images/honor/gs2.jpg",
+            "name": "MANAGER MD. MAHADI HASAN",
+            "rank": "",
+            "duration": "05.12.2024 - 11.01.2025",
+            "type": "portrait"
+          },
+          {
+            "image": "/assets/images/honor/gs3.jpg",
+            "name": "MAJ MD KHALID REZA",
+            "rank": "Inf",
+            "duration": "17.11.2023 - 03.12.2024",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gs4.jpg",
+            "name": "MAJ MD. SHAHEEDUL ISLAM BHUYAIN",
+            "rank": "",
+            "duration": "16.11.2021 - 07.11.2023",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gs5.jpg",
+            "name": "MAJ MOHAMMAD AHASAAN ULLAH",
+            "rank": "psc, Arty",
+            "duration": "05.02.2020 - 15.11.2021",
+            "type": "square"
+          },
+          {
+            "image": "/assets/images/honor/gs6.jpg",
+            "name": "MAJ S M SHAHINUR RAHMAN",
+            "rank": "",
+            "duration": "05.03.2017 - 04.02.2020",
+            "type": "portrait"
+          }
+        ]
+      }
+    }
+  ]
+}
