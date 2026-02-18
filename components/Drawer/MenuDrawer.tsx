@@ -139,16 +139,17 @@ export default function MenuDrawer({
 
             <div className="px-2">
               <button
-                onClick={() => {
-                  if (isAuthentication) {
-                    router.push("/ecommerce");
-                  } else {
-                    dispatch(openLogin({ redirect: "/ecommerce" }));
-                  }
-                }}
+              onClick={() => {router.push("/ecommerce");}}
+                // onClick={() => {
+                //   if (isAuthentication) {
+                //     router.push("/ecommerce");
+                //   } else {
+                //     dispatch(openLogin({ redirect: "/ecommerce" }));
+                //   }
+                // }}
                 className="px-4 py-2 rounded-full bg-[#1a572b] hover:bg-[#3e754e] text-white transition-colors font-medium"
               >
-                Food Order
+                Order Now
               </button>
             </div>
           </Collapse>
