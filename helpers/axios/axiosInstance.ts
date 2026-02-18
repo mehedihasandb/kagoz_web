@@ -24,7 +24,7 @@ instance.interceptors.request.use(
     // you can write or call a function here to add auth header
     // example below
     // const accessToken = localStorage.getItem('token');
-     const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjgsInVzZXJuYW1lIjoiMDE3OTc5OTMxMzEiLCJzdWIiOiIwMTc5Nzk5MzEzMSIsImlhdCI6MTc3MTM5MzA5NywiZXhwIjoxNzcxNDc5NDk3fQ.Tr3qoNSNJeo-gflfkVLF_rrB8IiuRanckCkkz7H06gw";
+     const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjgsInVzZXJuYW1lIjoiMDE3OTc5OTMxMzEiLCJzdWIiOiIwMTc5Nzk5MzEzMSIsImlhdCI6MTc3MTQwMjY0NywiZXhwIjoxNzcxNDg5MDQ3fQ.4d46cptSgDMo-HwqOEpvbkgCrBw_KfWc3p9ptT67Z7I";
 
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
