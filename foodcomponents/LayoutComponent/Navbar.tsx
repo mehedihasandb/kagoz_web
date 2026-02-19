@@ -18,6 +18,7 @@ import { useRouter } from "next/navigation";
 import { logOutSuccess } from "@/api/slices/authSlice";
 import WithClientOnly from "@/hoc/WithClientOnly";
 
+
 type NavItem = {
   label: string;
   link?: string;
@@ -128,21 +129,18 @@ export default function Navbar() {
       className={`bg-white sticky top-0 z-20 ${isSticky ? "shadow-md" : ""}`}
     >
       <div
-        className={`transition-all duration-300 ${
-          isSticky ? "py-2 px-4 sm:px-0 h-18" : "py-4 px-4 sm:px-0 h-24"
-        }`}
+        className={`transition-all duration-300 ${isSticky ? "py-2 px-4 sm:px-0 h-18" : "py-4 px-4 sm:px-0 h-24"
+          }`}
       >
         <Container>
           <div
-            className={`mx-auto flex w-full justify-between text-sm ${
-              isSideMenuOpen ? "items-center" : ""
-            }`}
+            className={`mx-auto flex w-full justify-between text-sm ${isSideMenuOpen ? "items-center" : ""
+              }`}
           >
 
             <div
-              className={`flex items-center gap-10 ${
-                isSideMenuOpen ? "flex-grow justify-center" : ""
-              }`}
+              className={`flex items-center gap-10 ${isSideMenuOpen ? "flex-grow justify-center" : ""
+                }`}
             >
               <Link href="/ecommerce">
                 <Image
@@ -150,9 +148,8 @@ export default function Navbar() {
                   width={isSideMenuOpen ? 90 : 120}
                   height={isSideMenuOpen ? 90 : 120}
                   alt="logo"
-                  className={`cursor-pointer transition-all duration-300 object-contain ${
-                    isSideMenuOpen ? "w-12" : "w-20"
-                  }`}
+                  className={`cursor-pointer transition-all duration-300 object-contain ${isSideMenuOpen ? "w-12" : "w-20"
+                    }`}
                 />
               </Link>
             </div>
@@ -174,7 +171,7 @@ export default function Navbar() {
                         )}
                       </Link>
                     </p>
-                    { d.children && (
+                    {d.children && (
                       <div className="absolute z-10 left-0 top-12 hidden w-auto flex-col gap-1 border-4 bg-white py-3 shadow-sm transition-all group-hover:flex">
                         {d.children.map((ch, i) => (
                           <Link
@@ -225,11 +222,11 @@ export default function Navbar() {
                       <GiShoppingBag />
                     </button>
                     <WithClientOnly>
-                    {cartCount > 0 && (
-                      <span className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                        {cartCount}
-                      </span>
-                    )}
+                      {cartCount > 0 && (
+                        <span className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                          {cartCount}
+                        </span>
+                      )}
                     </WithClientOnly>
                   </div>
                 </Link>
@@ -243,7 +240,7 @@ export default function Navbar() {
             />
 
             {/* Mobile Menu */}
-            { isSideMenuOpen && (
+            {isSideMenuOpen && (
               <MobileNav closeSideMenu={closeSideMenu} />
             )}
           </div>
@@ -256,6 +253,13 @@ export default function Navbar() {
 function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
   const [isMounted, setIsMounted] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+
+  const router = useRouter();
+
+  const goToWebsite = () => {
+    closeSideMenu();
+    router.push("/");
+  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -270,14 +274,12 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
 
   return (
     <div
-      className={`fixed z-10 left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/60 md:hidden transition-opacity duration-500 ease-in-out ${
-        isMounted ? "opacity-100" : "opacity-0"
-      }`}
+      className={`fixed z-10 left-0 top-0 flex h-full min-h-screen w-full justify-end bg-black/60 md:hidden transition-opacity duration-500 ease-in-out ${isMounted ? "opacity-100" : "opacity-0"
+        }`}
     >
       <div
-        className={`h-full w-[90%] bg-white px-4 py-4 transition-transform duration-500 ease-in-out transform ${
-          isMounted ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`h-full w-[90%] bg-white px-4 py-4 transition-transform duration-500 ease-in-out transform ${isMounted ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <section className="flex justify-end">
           <AiOutlineClose
@@ -298,6 +300,24 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
                 {d.children}
               </SingleNavItem>
             ))}
+        </div>
+        <div className="py-2">
+          <button
+            onClick={goToWebsite}
+            // onClick={() => {
+            //   router.push("/");
+            // }}
+            // onClick={() => {
+            //   if (isAuthentication) {
+            //     router.push("/ecommerce");
+            //   } else {
+            //     dispatch(openLogin({ redirect: "/ecommerce" }));
+            //   }
+            // }}
+            className="px-4 py-2 rounded-full bg-[#1a572b] hover:bg-[#3e754e] text-white transition-colors font-medium"
+          >
+            Kagoz
+          </button>
         </div>
       </div>
     </div>
