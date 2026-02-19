@@ -94,6 +94,6 @@ export default function ShopProduct() {
           </div>
         </div>
       </section>
-    </div>
+    </div> 
   )
 }
