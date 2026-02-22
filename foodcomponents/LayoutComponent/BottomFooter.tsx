@@ -17,7 +17,7 @@ export default function BottomFooter() {
   }, []);
 
   return (
-    <div className="py-5 sticky bottom-0 z-20 flex w-full sm:hidden bg-black text-tprimary border-t">
+    <div className="py-5 sticky bottom-0 z-10 flex w-full sm:hidden bg-black text-tprimary border-t">
       <Container className="w-[50%]">
         <div className="flex items-center justify-center space-y-2">
           <div className="w-full flex text-sm items-center justify-between gap-2">

@@ -35,7 +35,7 @@ export default function MenuDrawer({
   }, [pathname]);
 
   return (
-    <div>
+    <div className=" sticky top-0 z-30 bg-red-800">
       <Drawer
         title={
           <div className="flex justify-end items-center">

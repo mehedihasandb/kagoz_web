@@ -93,7 +93,7 @@ export default function HomeHeader() {
                 src={Logo}
                 width={80}
                 height={80}
-                alt="BOF Golf Club, Gazipur"
+                alt="Kagoz"
                 className="h-10 w-auto rounded-full"
               />
             </div>
