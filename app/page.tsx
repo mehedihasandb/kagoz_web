@@ -4,6 +4,7 @@ import AdvantagesSection from "@/components/AdvantagesSection";
 import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
 import GallerySection from "@/components/GallerySection";
+import HomeHeader from "@/components/HomeHeader";
 import MapSection from "@/components/MapSection";
 import PaperProductsSection from "@/components/PaperProductsSection";
 import ParallaxSection from "@/components/ParallaxSection";
@@ -13,7 +14,8 @@ import VisionMissionSection from "@/components/VisionMissionSection";
 
 export default function Home() {
   return (
-    <div className="bg-white overflow-x-hidden">
+    <div className="bg-white ">
+      <HomeHeader />
       <Sldier/>
       <AboutSection />
       <VisionMissionSection />

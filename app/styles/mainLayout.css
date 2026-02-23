@@ -43,7 +43,7 @@ body {
 }
 
 .layered-blur-overlay {
-  position: relative;
+  /* position: relative; */
 }
 
 .layered-blur-overlay::before {

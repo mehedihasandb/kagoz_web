@@ -314,7 +314,7 @@ function MobileNav({ closeSideMenu }: { closeSideMenu: () => void }) {
             //     dispatch(openLogin({ redirect: "/ecommerce" }));
             //   }
             // }}
-            className="px-4 py-2 rounded-full bg-[#1a572b] hover:bg-[#3e754e] text-white transition-colors font-medium"
+            className="px-4 py-2 rounded-full bg-[#0042D7] hover:bg-[#0042D71d] text-white transition-colors font-medium"
           >
             Kagoz
           </button>

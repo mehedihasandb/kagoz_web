@@ -76,14 +76,18 @@ export default function HomeHeader() {
       name: "CLIENT",
       href: "#clients",
     },
-    { name: "TESTIMONIALS", href: "#testimonials" },
-    { name: "CONTACT", href: "#contact" },
+    { 
+      name: "TESTIMONIALS", 
+      href: "#testimonials" },
+    { 
+      name: "CONTACT", 
+      href: "#contact" },
   ];
 
   return (
     <WithClientOnly>
       <header
-        className="sticky top-0 font-monda layered-blur-overlay flex justify-end md:justify-center items-center"
+        className="sticky bg-[#0040d7a1] top-0 font-monda layered-blur-overlay flex justify-end md:justify-center items-center"
         style={{ zIndex: 999 }}
       >
         <div className="flex md:hidden w-full px-4">

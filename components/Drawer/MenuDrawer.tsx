@@ -51,8 +51,8 @@ export default function MenuDrawer({
         onClose={onClose}
         open={open}
         styles={{
-          body: { backgroundColor: "#d1fae5" },
-          header: { backgroundColor: "#bbf7d0", overflow: "visible" },
+          body: { backgroundColor: "#0040d7a1" },
+          header: { backgroundColor: "#0042D7a5", overflow: "visible" },
         }}
       >
         <div className="">
@@ -69,7 +69,7 @@ export default function MenuDrawer({
                     hasDropdown ? (
                       group.name
                     ) : (
-                      <Link href={group.href} className="block w-full">
+                      <Link href={group.href} className="block w-full" onClick={onClose} >
                         {group.name}
                       </Link>
                     )
@@ -114,7 +114,7 @@ export default function MenuDrawer({
                     hasDropdown ? (
                       group.name
                     ) : (
-                      <Link href={group.href} className="block w-full">
+                      <Link href={group.href} className="block w-full" onClick={onClose} >
                         {group.name}
                       </Link>
                     )
@@ -147,7 +147,7 @@ export default function MenuDrawer({
                 //     dispatch(openLogin({ redirect: "/ecommerce" }));
                 //   }
                 // }}
-                className="px-4 py-2 rounded-full bg-[#1a572b] hover:bg-[#3e754e] text-white transition-colors font-medium"
+                className="px-4 py-2 rounded-full bg-[#0042D7] hover:bg-[#0040d7d5] text-white transition-colors font-medium"
               >
                 Order Now
               </button>

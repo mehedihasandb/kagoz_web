@@ -40,7 +40,6 @@ export default function VideoBackground() {
 
   return (
     <section className="relative h-[100vh] overflow-hidden">
-      <HomeHeader />
       {/* Video Background */}
       <div className="absolute inset-0">
         <div

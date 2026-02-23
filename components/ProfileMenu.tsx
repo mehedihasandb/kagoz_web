@@ -72,7 +72,7 @@ export default function ProfileMenu({
         onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
       >
         <div
-          className={`rounded-full bg-[#1a572b] text-white overflow-hidden flex items-center justify-center`}
+          className={`rounded-full bg-[#0042D7] text-white overflow-hidden flex items-center justify-center`}
           style={{ width: size, height: size }}
         >
           {user?.image ? (
@@ -153,7 +153,7 @@ export default function ProfileMenu({
           </>
         ) : (
           <button
-            className="block w-full text-left px-4 py-2 text-sm font-bold text-green-700 hover:bg-gray-100"
+            className="block w-full text-left px-4 py-2 text-sm font-bold text-[#0042D7] hover:bg-gray-100"
             onClick={() => {
               setOpen(false);
               onLoginClick?.();
