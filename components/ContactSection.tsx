@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="max-w-5xl mx-auto px-3 md:px-4 font-monda">
 
         {/* Section Title */}

@@ -8,7 +8,7 @@ import {
 
 export default function AdvantagesSection() {
   return (
-    <section id="advantages" className="py-12">
+    <section className="py-12">
       <div className="max-w-5xl mx-auto px-3 md:px-4 font-monda">
         
         <h2 className="text-3xl text-black font-bold mb-8">

@@ -3,7 +3,7 @@ import { FaBuilding } from "react-icons/fa";
 
 export default function ClientsSection() {
   return (
-    <section id="clients" className="py-12 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-5xl mx-auto px-3 md:px-4 font-monda">
 
         {/* Section Title */}
@@ -56,7 +56,7 @@ export default function ClientsSection() {
         </div>
 
         {/* Closing Text */}
-        <p className="text-gray-700 max-w-3xl">
+        <p id="testimonials" className="text-gray-700 max-w-3xl">
           These partnerships demonstrate our ability to tailor solutions to
           unique client needs across different sectors.
         </p>

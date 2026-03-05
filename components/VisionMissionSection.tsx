@@ -5,7 +5,7 @@ export default function VisionMissionSection() {
       <div className="max-w-5xl mx-auto px-3 md:px-4 font-monda grid md:grid-cols-2 gap-8">
         
         {/* Vision */}
-        <div id="vision" className="rounded-xl shadow-lg p-4">
+        <div className="rounded-xl shadow-lg p-4">
           <h3 className="text-2xl font-bold text-black mb-4 flex items-center">
             <i className="fas fa-eye text-red-600"></i>
             Our Vision
@@ -18,7 +18,7 @@ export default function VisionMissionSection() {
         </div>
 
         {/* Mission */}
-        <div id="mission"  className="rounded-lg shadow-xl p-4">
+        <div className="rounded-lg shadow-xl p-4">
           <h3 className="text-2xl font-bold text-black mb-4 flex items-center">
             <i className="fas fa-bullseye text-red-600"></i>
             Our Mission
@@ -37,7 +37,7 @@ export default function VisionMissionSection() {
               Source directly from original manufacturers to ensure exact GSM specifications
             </li>
             <li className="flex gap-2">
-              <span className="text-red-600 font-bold">✓</span>
+              <span id="advantages" className="text-red-600 font-bold">✓</span>
               Provide the best experience at every stage of collaboration
             </li>
           </ul>

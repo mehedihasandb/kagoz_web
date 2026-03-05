@@ -3,7 +3,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="max-w-5xl mx-auto px-3 md:px-4 font-monda">
 
         {/* Section Title */}
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
               “Recommended and high standard of paper quality. Their products
               consistently meet our manufacturing documentation requirements.”
             </p>
-            <span className="font-semibold text-gray-900">
+            <span id="contact" className="font-semibold text-gray-900">
               – Bangladesh Machine Tools Factory
             </span>
           </div>

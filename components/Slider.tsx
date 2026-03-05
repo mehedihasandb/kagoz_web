@@ -79,6 +79,9 @@ export default function VideoBackground() {
         </h2>
         <p className="mt-2 text-lg">Signature Design, Exceptional Value</p>
       </motion.div>
+        <div className="pb-16">
+          <span id="about"></span>
+        </div>
     </section>
   );
 }

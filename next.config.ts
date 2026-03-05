@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     domains: process.env.NEXT_PUBLIC_API_BASE_URL
       ? [new URL(process.env.NEXT_PUBLIC_API_BASE_URL).hostname]
-      : ['192.168.10.10'],
+      : ['192.168.10.10', '202.83.126.218', 'api.kagoz.net'],
   },
   typescript: {
     ignoreBuildErrors: true,

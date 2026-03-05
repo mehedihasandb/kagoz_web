@@ -69,7 +69,9 @@ export default function PaperProductsSection() {
               </li>
             </ul>
           </div>
-
+          <div className="pb-8">
+            <span id="clients" ></span>
+          </div>
         </div>
       </div>
     </section>
