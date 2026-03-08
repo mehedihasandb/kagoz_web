@@ -138,7 +138,19 @@ const ProductCard = ({ category, items }: ItemsProps) => {
               onTouchStart={() => setHoveredIndex(index)}
             >
               <Link href={`/ecommerce/product/${img.subGroupId}`}>
-                <div className="relative overflow-hidden aspect-square w-full">
+                <div className="relative group overflow-hidden aspect-square w-full">
+                  {img.currentStock === 0 && img.stockStatusId === 1 && (
+                    <div className="relative overflow-hidden w-full h-full bg-white border">
+                      <div className="absolute right-0 top-0 h-16 w-16">
+                        <div
+                          className="absolute transform rotate-45 bg-primary text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] shadow-md z-10">
+                          Out Of Stock
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+
                   <Image
                     src={baseUrl + img.subgroupThumbnail}
                     alt="product"
@@ -206,20 +218,43 @@ const ProductCard = ({ category, items }: ItemsProps) => {
                     {img.displayItemName}
                   </h6>
                 </Link>
-                <span className="detail-price block text-xs text-red-500 font-bold mt-1 mb-3">
-                  BDT {img.discountedPrice}.00
-                  <span className="line-through text-gray-500 ml-2">
-                    BDT {img.mrp}.00
-                  </span>
-                </span>
+                {!(img.currentStock === 0 && img.stockStatusId === 0) && (
+                  <p className="text-xs mt-3">
+                    <span className="detail-price block text-xs text-red-500 font-bold mt-1 mb-3">
+                      BDT {img.discountedPrice}.00
+                      <span className="line-through text-gray-500 ml-2">
+                        BDT {img.mrp}.00
+                      </span>
+                    </span>
+                  </p>
+                )}
               </div>
-              <button
+
+              {img.currentStock === 0 && img.stockStatusId === 0 ? (
+                <button className="mt-10 py-2 w-full bg-gray-400 text-white rounded-sm" disabled>
+                  Coming Soon
+                </button>
+              ) : img.currentStock === 0 ? (
+                <button className="py-2 w-full bg-gray-400 text-white rounded-sm" disabled>
+                  Out of Stock
+                </button>
+              ) : (
+                <button
+                  className="py-2 w-full bg-primary text-white rounded-sm hover:bg-primary/80 duration-300"
+                  onClick={() => handleAddToCart(img)}
+                >
+                  Add to Cart
+                </button>
+              )}
+
+
+              {/* <button
                 className="py-2 w-full bottom-0 flex items-center justify-center text-lg font-semibold bg-primary text-tsecondary hover:bg-primary hover:text-tprimary duration-300 rounded-sm truncate"
                 onClick={() => handleAddToCart(img)}
               >
                 Add to Cart
 
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

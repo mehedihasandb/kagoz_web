@@ -14,7 +14,7 @@ import { addToCart } from "@/api/slices/cartSlice";
 
 const ShopCard = ({ items, grid, gridView }: any) => {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const {user } = useSelector((state: any) => state.user);
+  const { user } = useSelector((state: any) => state.user);
   const userId = user?.id;
   const dispatch = useDispatch();
   const { data, refetch: wishRefetch } = useWishListQuery({});
@@ -121,14 +121,13 @@ const ShopCard = ({ items, grid, gridView }: any) => {
                             // height="100%"
                             sizes="(max-width:768px) 50vw, 250px"
                             className="object-fill transform transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-md"
-                            //preview={false}
+                          //preview={false}
                           />
                           <div
-                            className={`absolute bottom-0 right-1/4 flex flex-row space-y-2 transition-opacity duration-300 ${
-                              hoveredIndex === index
-                                ? "opacity-100"
-                                : "opacity-0"
-                            }`}
+                            className={`absolute bottom-0 right-1/4 flex flex-row space-y-2 transition-opacity duration-300 ${hoveredIndex === index
+                              ? "opacity-100"
+                              : "opacity-0"
+                              }`}
                           >
                             <div className="flex flex-row items-center justify-center bg-gray-50 border border-gray-300 divide-y">
                               <Link
@@ -204,8 +203,18 @@ const ShopCard = ({ items, grid, gridView }: any) => {
                 onTouchStart={handleTouch}
               >
                 <Link href={`/ecommerce/product/${img.subGroupId}`}>
-                  <div className="relative w-full aspect-square overflow-hidden">
+                  <div className="relative group w-full aspect-square overflow-hidden">
                     {/* <div className="flex items-center justify-center w-full aspect-square overflow-hidden"> */}
+                    {img.currentStock === 0 && img.stockStatusId === 1 && (
+                      <div className="relative overflow-hidden w-full h-full bg-white border">
+                        <div className="absolute right-0 top-0 h-16 w-16">
+                          <div
+                            className="absolute transform rotate-45 bg-primary text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] shadow-md z-10">
+                            Out Of Stock
+                          </div>
+                        </div>
+                      </div>
+                    )}
                     <Image
                       src={baseUrl + img.subgroupThumbnail}
                       alt="product"
@@ -232,20 +241,42 @@ const ShopCard = ({ items, grid, gridView }: any) => {
                       {img.displayItemName}
                     </h6>
                   </Link>
-                  <span className="detail-price block text-xs text-red-500 font-bold mt-1 mb-3">
-                    BDT {img.discountedPrice}.00
-                    <span className="line-through text-gray-500 ml-2">
-                      BDT {img.mrp}.00
-                    </span>
-                  </span>
+                  {!(img.currentStock === 0 && img.stockStatusId === 0) && (
+                    <p className="text-xs mt-3">
+                      <span className="detail-price block text-xs text-primary font-bold mt-1 mb-3">
+                        BDT {img.discountedPrice}.00
+                        <span className="line-through text-gray-500 ml-2">
+                          BDT {img.mrp}.00
+                        </span>
+                      </span>
+                    </p>
+                  )}
                 </div>
 
-                <button
+
+                {img.currentStock === 0 && img.stockStatusId === 0 ? (
+                  <button className="mt-10 py-2 w-full bg-gray-400 text-white rounded-sm" disabled>
+                    Coming Soon
+                  </button>
+                ) : img.currentStock === 0 ? (
+                  <button className="py-2 w-full bg-gray-400 text-white rounded-sm" disabled>
+                    Out of Stock
+                  </button>
+                ) : (
+                  <button
+                    className="py-2 w-full bg-primary text-white rounded-sm hover:bg-primary/80 duration-300"
+                    onClick={() => handleAddToCart(img)}
+                  >
+                    Add to Cart
+                  </button>
+                )}
+
+                {/* <button
                   className="py-2 w-full bottom-0 flex items-center justify-center text-lg font-semibold bg-primary text-tsecondary hover:bg-primary hover:text-tprimary duration-300 rounded-sm truncate"
                   onClick={() => handleAddToCart(img)}
                 >
                   Add to Cart
-                </button>
+                </button> */}
               </div>
             ))
           ) : (

@@ -19,7 +19,7 @@ export default function ShopProduct() {
                   alt="banner"
                 />
                 <div className="absolute p-4 bg-opacity-75 text-center">
-                  <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">up to 60% off</h3>
+                  {/* <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">up to 60% off</h3> */}
                   <h4 className="text-orange-600 uppercase text-lg font-bold">Quality & Creativity</h4>
                   <ShopButton link='/ecommerce/shopping' className='text-white py-1 px-3 rounded-full bg-primary lg:px-4 lg:hover:bg-black'>Shop Now</ShopButton>
                 </div>
@@ -35,7 +35,7 @@ export default function ShopProduct() {
                   alt="banner"
                 />
                 <div className="absolute p-4 bg-opacity-75 text-center">
-                  <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">up to 60% off</h3>
+                  {/* <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">up to 60% off</h3> */}
                   <h4 className="text-orange-600 uppercase text-lg font-bold">Smart & Simple</h4>
                   <ShopButton link='/ecommerce/shopping' className='text-white p-1 px-3 rounded-full bg-primary lg:px-4 lg:hover:bg-black'>Shop Now</ShopButton>
                 </div>
@@ -53,8 +53,8 @@ export default function ShopProduct() {
                   alt="banner"
                 />
                 <div className="absolute p-4 bg-opacity-75 text-center">
-                  <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">best offer</h3>
-                  <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4>
+                  <h3 className="text-black lg:text-xl lg:font-semibold capitalize">best offer</h3>
+                  {/* <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4> */}
                   <ShopButton link='/ecommerce/shopping' className='text-white p-1 px-3 rounded-full  bg-primary lg:px-4 lg:hover:bg-black'>Shop Now</ShopButton>
                 </div>
               </div>
@@ -69,8 +69,8 @@ export default function ShopProduct() {
                   alt="banner"
                 />
                 <div className="absolute p-4 bg-opacity-75 text-center">
-                  <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">best Discount</h3>
-                  <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4>
+                  <h3 className="text-black lg:text-xl lg:font-semibold capitalize">best Sale</h3>
+                  {/* <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4> */}
                   <ShopButton link='/ecommerce/shopping' className='text-white p-1 px-3 rounded-full  bg-primary lg:px-4 lg:hover:bg-black'>Shop Now</ShopButton>
                 </div>
               </div>
@@ -85,8 +85,8 @@ export default function ShopProduct() {
                   alt="banner"
                 />
                 <div className="absolute p-4 bg-opacity-75 text-center">
-                  <h3 className="text-green-600 lg:text-xl lg:font-semibold capitalize">best sale</h3>
-                  <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4>
+                  <h3 className="text-black lg:text-xl lg:font-semibold capitalize">Jam-free Performance</h3>
+                  {/* <h4 className="text-orange-600 uppercase text-lg font-bold">Up to 50% off</h4> */}
                   <ShopButton link='/ecommerce/shopping' className='text-white p-1 px-3 rounded-full  bg-primary lg:px-4 lg:hover:bg-black'>Shop Now</ShopButton>
                 </div>
               </div>
