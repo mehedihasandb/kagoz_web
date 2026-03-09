@@ -30,7 +30,7 @@ export default function Footer() {
           </p>
           <div className="flex py-2 gap-4">
             <Link
-              href="https://www.facebook.com/pages/Bof%20Golf%20Club,Gazipur/367441289947935/"
+              href="#"
               target="blank"
             >
               <span>
@@ -38,7 +38,7 @@ export default function Footer() {
               </span>
             </Link>
             <Link
-              href="https://www.youtube.com/watch?v=rWYJehEV8qs"
+              href="#"
               target="blank"
             >
               <span>

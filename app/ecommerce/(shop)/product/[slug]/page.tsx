@@ -237,7 +237,7 @@ export default function Product({ params }: any) {
   };
   const offPercent = Math.round(
     ((selectedItem?.mrp - selectedItem?.discountedPrice) / selectedItem?.mrp) *
-      100
+    100
   );
 
   const onSubmit = async (values: any) => {
@@ -388,13 +388,41 @@ export default function Product({ params }: any) {
                         className="flex justify-center items-center"
                         style={{ height: "calc(100vw / 4)" }}
                       >
-                        <Image
+                        {/* <Image
                           width="90%"
                           height="100%"
                           src={baseUrl + selectedItem.itemMedia[0]?.mediaUrl}
                           alt={`Slide`}
                           className="object-contain lg:max-w-full lg:h-auto lg:mx-auto "
-                        />
+                        /> */}
+                        <div className="relative group w-full aspect-square overflow-hidden">
+
+                          {/* Ribbons */}
+                          {selectedItem?.currentStock === 0 && selectedItem?.stockStatusId === 1 && (
+                            <div className="absolute right-0 top-0 h-16 w-16 z-10">
+                              <div className="absolute transform rotate-45 bg-red-600 text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] shadow-md">
+                                Out Of Stock
+                              </div>
+                            </div>
+                          )}
+
+                          {selectedItem?.currentStock === 0 && selectedItem?.stockStatusId === 0 && (
+                            <div className="absolute right-0 top-0 h-16 w-16 z-10">
+                              <div className="absolute transform rotate-45 bg-blue-700 text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] shadow-md">
+                                Coming Soon
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Product Image */}
+                          <Image
+                            src={baseUrl + selectedItem.itemMedia?.[0]?.mediaUrl}
+                            alt="product"
+                            //fill
+                            sizes="(max-width:768px) 50vw, 250px"
+                            className="object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-md"
+                          />
+                        </div>
                       </div>
                     </div>
                   ) : (
@@ -450,19 +478,22 @@ export default function Product({ params }: any) {
                     <p className="font-bold text-gray-700 text-center capitalize">
                       {selectedItem?.displayItemName}
                     </p>
-                    <p className="text-center capitalize">
-                      <span className="text-gray-700 m-1 font-semibold text-sm">
-                        {" "}
-                        <span className="text- font-bold">৳ </span>
-                        {selectedItem?.discountedPrice?.toFixed(2)}
-                      </span>
-                      <span className="m-1 uppercase text-gray-500 text-xs line-through">
-                        mrp ৳{selectedItem?.mrp?.toFixed(2)}
-                      </span>
-                      <span className="m-1 text-sky-500 text-xs font-bold">
-                        {offPercent}% off
-                      </span>
-                    </p>
+                    {/* Hide Price for Coming Soon */}
+                    {!(selectedItem?.currentStock === 0 && selectedItem?.stockStatusId === 0) && (
+                      <p className="text-center capitalize">
+                        <span className="text-gray-700 m-1 font-semibold text-sm">
+                          {" "}
+                          <span className="text- font-bold">৳ </span>
+                          {selectedItem?.discountedPrice?.toFixed(2)}
+                        </span>
+                        <span className="m-1 uppercase text-gray-500 text-xs line-through">
+                          mrp ৳{selectedItem?.mrp?.toFixed(2)}
+                        </span>
+                        <span className="m-1 text-sky-500 text-xs font-bold">
+                          {offPercent}% off
+                        </span>
+                      </p>
+                    )}
                     {/* <ul className="flex justify-center items-center">
                                             <li><IoMdStar className='text-orange-300 text-lg' /></li>
                                             <li><IoMdStar className='text-orange-300 text-lg' /></li>
@@ -518,48 +549,82 @@ export default function Product({ params }: any) {
 
                                             </div>
                                         </div> */}
-                    <div className="grid lg:justify-items-start m-2">
-                      <p className="text-center lg:text-start font-bold">
-                        Quantity
-                      </p>
-                      <div className="flex justify-center items-center w-2/3 mx-auto lg:mx-0 bg-white border m-2 lg:py-1">
-                        <button
-                          className="px-3 bg-white border-r cursor-pointer"
-                          onClick={handleMinus}
-                        >
-                          <FiMinus />
-                        </button>
-                        <div className="bg-white">
-                          <Input
-                            className="text-center bg-white rounded-none border-none"
-                            type="text"
-                            value={quantity}
-                            onChange={handleQtyChange}
-                          />
+                    {/* SHOW QUANTITY ONLY IF PRODUCT IS AVAILABLE */}
+                    {selectedItem?.currentStock > 0 && (
+                      <div className="grid lg:justify-items-start m-2">
+                        <p className="text-center lg:text-start font-bold">
+                          Quantity
+                        </p>
+                        <div className="flex justify-center items-center w-2/3 mx-auto lg:mx-0 bg-white border m-2 lg:py-1">
+                          <button
+                            className="px-3 bg-white border-r cursor-pointer"
+                            onClick={handleMinus}
+                          >
+                            <FiMinus />
+                          </button>
+                          <div className="bg-white">
+                            <Input
+                              className="text-center bg-white rounded-none border-none"
+                              type="text"
+                              value={quantity}
+                              onChange={handleQtyChange}
+                            />
+                          </div>
+                          <button
+                            className="grid justify-items-center px-3 bg-white border-l cursor-pointer"
+                            onClick={handlePlus}
+                          >
+                            <p>
+                              <FiPlus />
+                            </p>
+                          </button>
                         </div>
-                        <button
-                          className="grid justify-items-center px-3 bg-white border-l cursor-pointer"
-                          onClick={handlePlus}
-                        >
-                          <p>
-                            <FiPlus />
-                          </p>
-                        </button>
                       </div>
-                    </div>
+                    )}
                     <div className="flex justify-center items-center lg:justify-start lg:ml-2">
-                      <div className="flex items-center justify-center text-white bg-primary p-2 w-2/3 max-w-96 shake-icon hover:cursor-pointer hover:bg-black">
-                        <div className="mx-2 cart-icon">
-                          <FaCartShopping />
-                        </div>
+                      {selectedItem?.currentStock === 0 && selectedItem?.stockStatusId === 0 ? (
+                        <div className="flex items-center justify-center text-white bg-primary p-2 w-2/3 max-w-96 shake-icon hover:cursor-pointer hover:bg-black">
+                          <div className="mx-2 cart-icon">
+                            <FaCartShopping />
+                          </div>
 
-                        <button
-                          className="font-semibold"
+                          <button
+                            className="font-semibold" disabled
+                          //onClick={handleSubmitCart}
+                          >
+                            Coming Soon
+                          </button>
+                        </div>
+                      ) : null}
+                      {selectedItem?.currentStock === 0 && selectedItem?.stockStatusId === 1 ? (
+                        <div className="flex items-center justify-center text-white bg-primary p-2 w-2/3 max-w-96 shake-icon hover:cursor-pointer hover:bg-black">
+                          <div className="mx-2 cart-icon">
+                            <FaCartShopping />
+                          </div>
+
+                          <button
+                            className="font-semibold" disabled
+                          //onClick={handleSubmitCart}
+                          >
+                            Out of Stock
+                          </button>
+                        </div>
+                      ) : null}
+                      {selectedItem?.currentStock > 0 ? (
+                        <div className="flex items-center justify-center text-white bg-primary p-2 w-2/3 max-w-96 shake-icon hover:cursor-pointer hover:bg-black"
                           onClick={handleSubmitCart}
                         >
-                          Add To Cart
-                        </button>
-                      </div>
+                          <div className="mx-2 cart-icon">
+                            <FaCartShopping />
+                          </div>
+
+                          <button
+                            className="font-semibold" disabled
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      ) : null}
                       <button onClick={handleAddToWish}>
                         <div className="bg-primary text-white p-3 ml-2 hover:cursor-pointer hover:bg-black">
                           <FaHeart className="" />
@@ -629,12 +694,12 @@ export default function Product({ params }: any) {
                   <div className="my-4">
                     <ul className="flex">
                       <li className="m-2">
-                        <a href="https://www.facebook.com/pages/Bof%20Golf%20Club,Gazipur/367441289947935/">
+                        <a href="#">
                           <FaFacebookF />
                         </a>
                       </li>
                       <li className="m-2">
-                        <a href="https://www.youtube.com/watch?v=rWYJehEV8qs">
+                        <a href="#">
                           <FaYoutube />
                         </a>
                       </li>
